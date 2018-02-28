@@ -6,23 +6,22 @@ if (a > b) return (1);
 if (a < b) return (-1);
 }
 array.sort(comparer);
-a=1;m=0;
-for(a=0;a< array.length; a++)
+r=1;m=0;
+for(i=0;i< array.length; i++)
 {
 if (array[i]+1==array[i+1])
 {
-a=1;
+r=1;
 while (array[i]+1==array[i+1] || array[i]==array[i+1])
 {
 if (array[i]+1==array[i+1] )
-  a++;
-
+r++;
 i++;
-
 }
 i--;
 }
-if (m<a)m=a;
+if (m<r)m=r;
 }
 return(m);
 }
+
